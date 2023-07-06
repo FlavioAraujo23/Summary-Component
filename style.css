@@ -11,13 +11,13 @@
   --gradient-1: linear-gradient(to bottom,rgba(119, 85, 255, 1),rgba(47, 44, 233, 1));
   --gradient-2: linear-gradient(to bottom, rgba(77, 33, 201, 1),rgba(37, 33, 201, 0));
   --yellow: #FFB21E;
-  --yellow-white: mix(#FFB21E, #FFFFFF, 95%);
+  --yellow-white:#ffb01e15;
   --blue: #1125D6;
-  --blue-white: mix(#1125D6, #FFFFFF, 95%);
+  --blue-white: #1125d60e;;
   --green: #00BB8F;
-  --green-white: mix(#00BB8F, #FFFFFF, 95%);
+  --green-white: #00bb8f13;
   --red: #FF5555;
-  --red-white: mix(#FF5555, #FFFFFF, 95%);
+  --red-white:#ff555513;
   --dark-navy: #303B59;
   --light-blue: #CAC9FF;
   --very-light-blue: #ECF2FF;
@@ -39,6 +39,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
+  box-shadow: var(--sombra);
 }
 
 .result{
@@ -50,6 +51,7 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 32px;
+  z-index: 1;
 }
 
 .result p {
@@ -88,4 +90,107 @@
   color: var(--light-blue);
   width: 260px;
   text-align: center;
+}
+
+.summary {
+  width: 420px;
+  height: 520px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0px 32px 32px 0px;
+  position: relative;
+  left: -35px;
+  z-index: 0;
+}
+
+.summary h1 {
+  font: var(--heading-m);
+  color: var(--dark-navy);
+  width: 300px;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+width: 270px;
+height: 56px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+border-radius: 12px;
+}
+
+.reaction {
+  background: var(--red-white);
+}
+
+.reaction h2 {
+  font: var(--bold);
+  color: var(--red);
+}
+
+.reaction span,
+.memory span,
+.verbal span,
+.visual span{
+  font: var(--bold);
+  color: var(--dark-navy);
+}
+
+.reaction span span,
+.memory span span,
+.verbal span span,
+.visual span span {
+  font: var(--bold);
+  color: rgba(48, 59, 89, 0.5);
+}
+
+.memory {
+  background: var(--yellow-white);
+}
+
+.memory h2{
+  font: var(--bold);
+  color: var(--yellow);
+}
+
+.verbal {
+  background: var(--green-white);
+}
+
+.verbal h2 {
+  font: var(--bold);
+  color: var(--green);
+}
+
+.visual {
+  background: var(--blue-white);
+}
+
+.visual h2 {
+  font: var(--bold);
+  color: var(--blue);
+}
+
+.btn{
+  width: 290px;
+  height: 60px;
+  background: var(--dark-navy);
+  color: var(--white);
+  font: var(--bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 128px;
+}
+
+.btn:hover{
+  background: var(--gradient-1);
 }
