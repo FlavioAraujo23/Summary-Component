@@ -241,13 +241,14 @@ border-radius: 12px;
 
   .summary {
     width: 100vw;
-    height: 100vh;
-    border-radius: none;
+    height: 100vh;;
     position: static;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 0.8125rem;;
   }
 
   .summary h1 {
+    padding-top: 24px;
     font: var(--bold);
   }
   .reaction,
