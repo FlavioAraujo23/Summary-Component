@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
+
 :root{
   /*fontes: usar a propriedade font*/
   --heading-xl: 4.5rem 'Hanken Grotesk', sans-serif;
@@ -193,4 +194,88 @@ border-radius: 12px;
 
 .btn:hover{
   background: var(--gradient-1);
+}
+
+
+/* mobile design*/
+
+@media (max-width: 500px){
+  .container{
+    width: 100vw;
+    grid-template-columns: 1fr;
+  }
+
+  .result{
+    width: 100vw;
+    height: 360px;
+    border-radius: 0px 0px 32px 32px;
+  
+  }
+  .result p {
+    font: var(--bold);
+  }
+
+  .result div {
+    width: 140px;
+    height: 140px;
+  }
+
+  .number p {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  .number span {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .result h2{
+    font: var(--heading-m);
+  }
+
+  .result p:last-child {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .summary {
+    width: 100vw;
+    height: 100vh;
+    border-radius: none;
+    position: static;
+  }
+
+  .summary h1 {
+    font: var(--bold);
+  }
+  .reaction,
+  .memory,
+  .verbal,
+  .visual {
+  width: 315px;
+  }
+
+  .reaction h2,
+  .memory h2,
+  .verbal h2,
+  .visual h2 {
+    font-size: 1rem;
+  }
+
+  .reaction span,
+  .memory span,
+  .verbal span,
+  .visual span{
+    font-size: 1rem;
+  }
+
+  .btn{
+    width: 315px;
+    height: 56px;
+  }
+  
+
+
+  
 }
